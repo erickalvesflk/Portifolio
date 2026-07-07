@@ -5,6 +5,7 @@
     --secundary-color: #215BA3;
     --background-color: #f8f8f8;
     --card-background-color: #f0f0f0;
+    --card2-background-color: #d9e3f0;
     --inverted-main-color: #2D4B70;
     --text-color: #292D33;
     --white-text-color: #f8f8f8; 
@@ -18,7 +19,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 p {
@@ -123,12 +124,58 @@ section#desc-section{
 .theme-section {
     background-color: var(--card-background-color);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
 }
 
 .theme-section h2 {
     color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+/* ====== SKILL STYLE ====== */
+article#skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.skill{
+    background-color: var(--card2-background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.041);
+    
+    transition: box-shadow .25s ease-in-out;
+}
+
+div.skill h2{
+    margin-bottom: 10px;
+}
+
+div.skill:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.082);
+}
+
+div.skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.skill-container img{
+    display: inline-block;
+    width: 80px;
+}
+
+div.skill-container ul{
+    list-style: none;
+}
+
+div.skill-container span{
+    font-weight: bold;
+    color: var(--inverted-main-color);
 }
 
 @media screen and (min-width: 748px) {
