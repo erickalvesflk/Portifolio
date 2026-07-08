@@ -133,5 +133,10 @@ export class SkillBuilder extends BuildTools {
         }
 
         skills_article.appendChild(skill_div)
+
+        // CRIEATING EVENT FOR WHEN CLICK, OPEN DETAILS
+        skill_div.addEventListener("click",()=>{
+            details_div.toggleAttribute("open")
+        })
     }
 }

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* ====== SKILL STYLE ====== */
+
+article#skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.skill{
+    background-color: var(--card2-background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.041);
+    
+    transition: box-shadow .25s ease-in-out, transform .15s ease-in-out;
+}
+
+div.skill h2{
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+div.skill:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.082);
+    transform: scale(1.025);
+}
+
+div.skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.skill-container img{
+    display: inline-block;
+    width: 80px;
+}
+
+div.skill-container ul{
+    list-style: none;
+    width: 40%;
+}
+
+div.skill-container span{
+    font-weight: bold;
+    color: var(--inverted-main-color);
+}
+
+div.skill summary{
+    color: var(--main-color);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+div.skill details ul{
+    margin: 20px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.skill details li{
+    list-style:decimal-leading-zero;
+    font-size: .9em;
+}

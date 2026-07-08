@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* ESTILO APRESENTAÇÃO */
+
+section#apresentation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+section#apresentation-section img{
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 5px solid var(--card-background-color);
+    outline: 5px solid var(--main-color);
+}
+
+div#apresentation__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#apresentation__title ul{
+    display: flex;
+    justify-content: space-ar;
+    align-items: center;
+    list-style: none;
+}
+
+div#apresentation__title a{
+    color: var(--text-color);
+    font-size: 2em;
+    transition: color .15s , font-size .15s;
+}
+
+div#apresentation__title a:hover{
+    color: var(--inverted-main-color);
+    font-size: 2.2em;
+}
+
+div#apresentation__title p{
+    font-size: .9em;
+    color: var(--inverted-main-color);
+}
+
+div#apresentation__title h2{
+    margin-bottom: 0px;
+}
+
+div#apresentation__title h2::before,
+div#apresentation__title h2::after {
+    content: '-';
+    font-weight: lighter;
+    margin: 0px 5px;
+    color: var(--inverted-main-color);
+}
+
+section#desc-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.theme-section {
+    background-color: var(--card-background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+.theme-section h2 {
+    color: var(--main-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+section#apresentation-section h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#apresentation-section h3::before,
+section#apresentation-section h3::after {
+    content: "-";
+    margin: 10px;
+    font-weight: normal;
+}
+
+p.hobbie-p {
+    display: inline-block;
+    justify-content: center;
+    padding: 4px;
+    min-width: 80px;
+    border-radius: 50px;
+    
+    background-color: var(--main-color);
+    color: var(--background-color);
+
+    text-align: center;
+    font-size: .9em;
+    transition: background-color .15s, transform .15s;
+}
+
+p.hobbie-p:hover {
+    background-color: var(--inverted-main-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+div#hobbies-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
