@@ -1,28 +1,11 @@
 /**
- <div class="skill">
-    <div class="skill-container">
-        <div>
-            <h2>HTML5 e CSS3</h2>
-            <img src="src1" />
-            <img src="src2" />
-        </div>
-        <ul>
-            <li><span>Nível:</span> Básico - <nivel> </li>
-            <li><span>Periodo utilizando:</span> <periodo> ></li>
-            <li><span>Projetos:</span> <projetos_quant></li>
-        </ul>
-    </div>
-    <details>
-        <summary>Meu Histórico</summary>
-        <ul>
-        </ul>
-    </details>
- </div>
+ * @file - Group of classes, which have helpful methods for create new elements for the website
+*/
+
+/**
+ * @classdesc - Class with helpful methods for building elements
  */
-class BuildTools {
-    /**
-     * Class with helpful methods for building elements
-     */
+export class BuildTools {
 
     /**
      * Returns a formatted period.
@@ -52,12 +35,54 @@ class BuildTools {
     }
 }
 
-const skills_article = document.getElementById("skills-container") 
-
-export class SkillsCreator extends BuildTools {
+const hobbies_div = document.getElementById("hobbies-div") 
+export class HobbiesBuilder {
     /**
-     *  Constructor class for the section skills
+     * build a list of hobbies
+     * @param {string[]} hobbie_list - array with the hobbies
      */
+    static build(hobbie_list) {
+        if(hobbie_list){
+            hobbie_list.forEach((hobbie,index) => {
+                if(hobbie){
+                    let new_hobbie = document.createElement("p")
+
+                    new_hobbie.classList.add("hobbie-p")
+                    new_hobbie.innerText = hobbie
+
+                    console.log(`[hobbie loaded] - ${hobbie}`)
+                    hobbies_div.appendChild(new_hobbie)                
+                }
+            });
+        }
+    }
+}
+
+/**
+ * @classdesc - Constructor class for the section skills
+ * 
+ * <div class="skill">
+ *    <div class="skill-container">
+ *        <div>
+ *            <h2>HTML5 e CSS3</h2>
+ *            <img src="src1" />
+ *            <img src="src2" />
+ *        </div>
+ *        <ul>
+ *            <li><span>Nível:</span> Básico - <nivel> </li>
+ *            <li><span>Periodo utilizando:</span> <periodo> ></li>
+ *            <li><span>Projetos:</span> <projetos_quant></li>
+ *        </ul>
+ *    </div>
+ *    <details>
+ *        <summary>Meu Histórico</summary>
+ *        <ul>
+ *        </ul>
+ *    </details>
+ * </div>
+*/
+const skills_article = document.getElementById("skills-container") 
+export class SkillBuilder extends BuildTools {
 
     /**
      * Method, which creates a skill for the section-skills
@@ -66,6 +91,7 @@ export class SkillsCreator extends BuildTools {
      * @param {string} period - Period of the skill
      * @param {string[]} images - Array with the images sources
      * @param {string[]} descs - Array whith the details
+     * 
      */
     static createSkill(skill_name, level, period, projects_quant,images, descs){
 

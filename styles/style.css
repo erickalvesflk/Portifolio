@@ -200,6 +200,45 @@ section#desc-section{
     margin-bottom: 10px;
 }
 
+section#apresentation-section h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#apresentation-section h3::before,
+section#apresentation-section h3::after {
+    content: "-";
+    margin: 10px;
+    font-weight: normal;
+}
+
+p.hobbie-p {
+    display: inline-block;
+    padding: 4px;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    color: var(--background-color);
+    text-align: center;
+    font-size: .9em;
+    min-width: 80px;
+
+    transition: background-color .15s;
+}
+
+p.hobbie-p:hover {
+    background-color: var(--inverted-main-color);
+    cursor: pointer;
+}
+
+div#hobbies-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 2px;
+}
+
 /* ====== SKILL STYLE ====== */
 
 article#skills-container {
@@ -268,7 +307,7 @@ div.skill details li{
 
 /* ====== MIDIA QUERY ====== */
 
-@media screen and (min-width: 748px) {
+@media screen and (min-width: 762px) {
     #header-container__title p{
         display: inline-block;
     }
@@ -312,6 +351,7 @@ div.skill details li{
 }
 
 @media screen and (max-width: 400px) {
+
     div.skill-container ul{
         width: 50%;
     }

@@ -1,4 +1,6 @@
-import {SkillsCreator} from "./put_skills.js"
+import {BuildTools, HobbiesBuilder, SkillBuilder} from "./ElementsBuilder.js"
+const skills_address = "json/skills.json"
+const my_data_address = "json/my_data.json"
 
 async function loadData(address) {
     const response = await fetch(address)
@@ -7,13 +9,12 @@ async function loadData(address) {
     return data
 }
 
-const skills_address = "json/skills.json"
-
 document.addEventListener("DOMContentLoaded", async () => {
-    let myJson = await loadData(skills_address)
+    const skill_json = await loadData(skills_address)
+    const mydata_json = await loadData(my_data_address)
     
-    myJson.forEach((skill, index) => {
-        SkillsCreator.createSkill(
+    skill_json.forEach((skill, index) => {
+        SkillBuilder.createSkill(
             skill["skill-name"],
             skill["level"],
             skill["date"],
@@ -23,4 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         )
         console.log(`[Skill Loaded] - Skill-name: ${skill["skill-name"]}`)
     });
+
+    document.getElementById("old").innerText = BuildTools.calculatePeriod(mydata_json["born"])
+    HobbiesBuilder.build(mydata_json["hobbies"])
 })

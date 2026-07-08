@@ -14,14 +14,11 @@ function showDescription(nav) {
 document.addEventListener("DOMContentLoaded",()=>{
     nav_options.forEach((nav, index) => {
         let description = nav.querySelector("p")
-        console.log(nav)
         nav.addEventListener("mouseout",() => {
-            console.log(nav)
             showDescription(nav)
             description.style.display = "none"
         })
         nav.addEventListener("mouseover",() => {
-            console.log(nav)
             showDescription(nav)
             description.style.display = "inline"
         })
