@@ -2,12 +2,12 @@
 /**
  <div class="skill">
     <div class="skill-container">
-    <div>
-        <h2>HTML5 e CSS3</h2>
-        <img src="src1" />
-        <img src="src2" />
+        <div>
+            <h2>HTML5 e CSS3</h2>
+            <img src="src1" />
+            <img src="src2" />
         </div>
-            <ul>
+        <ul>
             <li><span>Nível:</span> Básico - <nivel> </li>
             <li><span>Periodo utilizando:</span> <periodo> ></li>
             <li><span>Projetos:</span> <projetos_quant></li>
@@ -21,12 +21,41 @@
  </div>
  */
 
+
 const skills_article = document.getElementById("skills-container") 
 
 export class SkillsCreator {
     /**
      *  Classe contrutora de skills
      */
+
+    static calculatePeriod(date){
+        /**
+         * Método que gera o periodo de aprendizado de uma skill
+         * @param {string[]} date - array com seus respectivos objetos: ano e mês
+         */
+
+        if(!date) return '?';
+
+        // (*) mês -> milissegundo
+        const CONVERTER = 30 * 24 * 3600 * 1000
+        let now = Date.now()
+        let skill_date = Date.UTC(date[0],date[1] ? date[1] : 0)
+        let delta_date = now - skill_date
+
+        if(delta_date <= 6 * CONVERTER){
+            // Tem menos de 6 meses
+            return "3 meses"
+        }
+        if(delta_date <= 12 * CONVERTER){
+            // Tem menos de 1 ano
+            return "6 meses"
+        }
+        // Tem mais de 1 ano
+        console.log(delta_date / CONVERTER / 12)
+        let date_year_format = Math.floor(delta_date / CONVERTER / 12)
+        return `${date_year_format} ${date_year_format > 1 ? 'anos' : 'ano'}`
+    }
 
     static createSkill(skill_name, level, period, projects_quant,images, descs){
         /**
@@ -58,18 +87,16 @@ export class SkillsCreator {
         let info_div = document.createElement("ul")
         skill_container_div.appendChild(info_div)
         info_div.innerHTML += `<li><span>Nível: </span>${level}</li>`
-        info_div.innerHTML += `<li><span>Periodo: </span>${period}</li>`
+        info_div.innerHTML += `<li><span>Periodo: </span>${this.calculatePeriod(period)}</li>`
         info_div.innerHTML += `<li><span>Projetos: </span>${projects_quant}</li>`
 
         // CRIANDO DETAILS
         let details_div = document.createElement("details")
-        details_div.toggleAttribute('open')
         details_div.innerHTML += `<summary>Conhecimentos...</summary>`
         skill_div.appendChild(details_div)
 
         if(descs){
             let details_list = document.createElement("ul")
-            console.log(descs)
             descs.forEach((desc, index) => {
                 details_list.innerHTML += `<li>${desc}</li>`
             })

@@ -1,8 +1,10 @@
 [
     {
         "skill-name": "HTML5 e CSS3",
-        "level": "Básico - Intermediario",
-        "period": "1 ano",
+        "level": "Básico",
+        "date": [
+            2025
+        ],
         "projects_quant": 1,
         "images": [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
@@ -15,7 +17,10 @@
     {
         "skill-name": "Qt",
         "level": "Básico",
-        "period": "3 meses",
+        "date": [
+            2025,
+            5
+        ],
         "projects_quant": 1,
         "images": [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg"
@@ -27,7 +32,9 @@
     {
         "skill-name": "Python",
         "level": "Intermediário",
-        "period": "4 anos",
+        "date": [
+            2022
+        ],
         "projects_quant": 6,
         "images": [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
@@ -40,7 +47,9 @@
     {
         "skill-name": "Javascript",
         "level": "Básico",
-        "period": "5 anos",
+        "date": [
+            2024
+        ],
         "projects_quant": 1,
         "images": [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
@@ -52,7 +61,10 @@
     {
         "skill-name": "C++",
         "level": "Básico",
-        "period": "3 meses",
+        "date": [
+            2026,
+            5
+        ],
         "projects_quant": 1,
         "images": [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"

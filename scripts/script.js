@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         SkillsCreator.createSkill(
             skill["skill-name"],
             skill["level"],
-            skill["period"],
+            skill["date"],
             skill["projects_quant"],
             skill["images"],
             skill["details"]
