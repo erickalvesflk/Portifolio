@@ -1,0 +1,64 @@
+[
+    {
+        "skill-name": "HTML5 e CSS3",
+        "level": "Básico - Intermediario",
+        "period": "1 ano",
+        "projects_quant": 1,
+        "images": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+        ],
+        "details": [
+            "Contruir paginas web simples e interativas (Como esta)."
+        ]
+    },
+    {
+        "skill-name": "Qt",
+        "level": "Básico",
+        "period": "3 meses",
+        "projects_quant": 1,
+        "images": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg"
+        ],
+        "details": [
+            "Habilidade de criar interfaces simples para C++ e Python (Utilizando o Pyside6)."
+        ]
+    },
+    {
+        "skill-name": "Python",
+        "level": "Intermediário",
+        "period": "4 anos",
+        "projects_quant": 6,
+        "images": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+        ],
+        "details": [
+            "Criar Jogos utilizando a biblioteca PyGame6",
+            "Criar aplicativos simples com interface utilizando o PySide6"
+        ]
+    },
+    {
+        "skill-name": "Javascript",
+        "level": "Básico",
+        "period": "5 anos",
+        "projects_quant": 1,
+        "images": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        ],
+        "details": [
+            "Utilizar para criar interações e automatizações simples para Sites Web"
+        ]
+    },
+    {
+        "skill-name": "C++",
+        "level": "Básico",
+        "period": "3 meses",
+        "projects_quant": 1,
+        "images": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+        ],
+        "details": [
+            "Criar aplicações simples utilizando o framework Qt"
+        ]
+    }
+]

@@ -17,6 +17,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: var(--background-color);
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -30,6 +31,10 @@ header#header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: sticky;
+    top: 0px;
+    z-index: 2;
 
     padding: 10px;
     margin-bottom: 20px;
@@ -178,6 +183,24 @@ div.skill-container span{
     color: var(--inverted-main-color);
 }
 
+div.skill summary{
+    color: var(--main-color);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+div.skill details ul{
+    margin: 20px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.skill details li{
+    list-style:decimal-leading-zero;
+    font-size: .9em;
+}
+
 @media screen and (min-width: 748px) {
     #header-container__title p{
         display: inline-block;
@@ -187,5 +210,24 @@ div.skill-container span{
         align-items: center;
         gap: 5px;
 
+    }
+    main {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto 30% 60% auto;
+    }
+
+    section#apresentation-section {
+        grid-column: 2 / 3;
+        box-sizing: content-box;
+        align-self: start;
+        position: sticky;
+        top: 120px;
+        z-index: 1;
+    }
+
+    section#desc-section {
+        grid-column: 3 / 4;
     }
 }
