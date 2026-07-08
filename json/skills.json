@@ -41,7 +41,8 @@
         ],
         "details": [
             "Criar Jogos utilizando a biblioteca PyGame6",
-            "Criar aplicativos simples com interface utilizando o PySide6"
+            "Criar aplicativos simples com interface utilizando o PySide6",
+            "Consumir APIs com a biblioteca request"
         ]
     },
     {

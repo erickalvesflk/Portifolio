@@ -173,6 +173,14 @@ div#apresentation__title h2{
     margin-bottom: 0px;
 }
 
+div#apresentation__title h2::before,
+div#apresentation__title h2::after {
+    content: '-';
+    font-weight: lighter;
+    margin: 0px 5px;
+    color: var(--inverted-main-color);
+}
+
 section#desc-section{
     display: flex;
     flex-direction: column;
@@ -258,6 +266,8 @@ div.skill details li{
     font-size: .9em;
 }
 
+/* ====== MIDIA QUERY ====== */
+
 @media screen and (min-width: 748px) {
     #header-container__title p{
         display: inline-block;
@@ -298,5 +308,23 @@ div.skill details li{
 
     section#desc-section {
         grid-column: 3 / 4;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.skill-container ul{
+        width: 50%;
+    }
+    div.skill-container img{
+        display: none;
+    }
+    div.skill-container h2 {
+        font-size: 1em;
+    }
+    div.skill-container li{
+        font-size: .8em;
+    }
+    div.skill summary{
+        font-size: .9em;
     }
 }
