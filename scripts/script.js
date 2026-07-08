@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             skill["images"],
             skill["details"]
         )
-        console.log(`Loaded ${skill["skill-name"]}`)
+        console.log(`[Skill Loaded] - Skill-name: ${skill["skill-name"]}`)
     });
 })
