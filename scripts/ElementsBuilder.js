@@ -86,6 +86,8 @@ export class AbilitiesBuilder {
     }
 }
 
+
+
 /**
  * 
  * <div class="skill">
@@ -169,6 +171,8 @@ export class SkillBuilder extends BuildTools {
     }
 }
 
+
+
 /**
  * <div class="formation">
  *    <h3><Nome Curso></h3>
@@ -179,7 +183,9 @@ export class SkillBuilder extends BuildTools {
  * </div>
 */
 
-/** @classdesc - Constructor class for the section formation */
+/** 
+ * @classdesc - Constructor class for the section formation 
+ * */
 export class EducationBuilder {
     /**
      * build an educaton div
@@ -200,6 +206,5 @@ export class EducationBuilder {
         education_bar.appendChild(document.createElement("div"))
 
         console.log(`[formation loaded] - Course name: ${course}`)
-
     }
 }
