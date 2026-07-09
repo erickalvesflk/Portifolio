@@ -91,6 +91,7 @@ section#apresentation-section h3::after {
     font-weight: normal;
 }
 
+
 p.hobbie-p {
     display: inline-block;
     justify-content: center;
@@ -98,7 +99,7 @@ p.hobbie-p {
     min-width: 80px;
     border-radius: 50px;
     
-    background-color: var(--main-color);
+    background-color: var(--secundary-color);
     color: var(--background-color);
 
     text-align: center;
@@ -113,6 +114,35 @@ p.hobbie-p:hover {
 }
 
 div#hobbies-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+p.other_ability-p {
+    display: inline-block;
+    justify-content: center;
+    padding: 4px;
+    min-width: 80px;
+    border-radius: 50px;
+    
+    background-color: var(--main-color);
+    color: var(--card-background-color);
+
+    text-align: center;
+    font-size: .9em;
+    transition: background-color .15s, transform .15s;
+}
+
+p.other_ability-p:hover {
+    background-color: var(--inverted-main-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+div#other-abilities-div {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

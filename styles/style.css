@@ -31,7 +31,6 @@ p {
     text-align: justify;
 }
 
-
 /* ====== MIDIA QUERY ====== */
 
 @media screen and (min-width: 762px) {
@@ -52,7 +51,7 @@ p {
         max-width: 1000px;
         margin: auto;
         display: grid;
-        grid-template-columns: auto 30% 60% auto;
+        grid-template-columns: auto 40% 50% auto;
     }
 
     section#apresentation-section {

@@ -58,6 +58,29 @@ export class HobbiesBuilder {
     }
 }
 
+const abilities_div = document.getElementById("other-abilities-div") 
+export class AbilitiesBuilder {
+    /**
+     * build a list of abilities
+     * @param {string[]} hobbie_list - array with the abilities
+     */
+    static build(hobbie_list) {
+        if(hobbie_list){
+            hobbie_list.forEach((hobbie,index) => {
+                if(hobbie){
+                    let new_hobbie = document.createElement("p")
+
+                    new_hobbie.classList.add("other_ability-p")
+                    new_hobbie.innerText = hobbie
+
+                    console.log(`[Other ability loaded] - ${hobbie}`)
+                    abilities_div .appendChild(new_hobbie)                
+                }
+            });
+        }
+    }
+}
+
 /**
  * @classdesc - Constructor class for the section skills
  * 

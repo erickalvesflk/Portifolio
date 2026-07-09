@@ -1,4 +1,4 @@
-import {BuildTools, HobbiesBuilder, SkillBuilder} from "./ElementsBuilder.js"
+import {BuildTools, HobbiesBuilder, SkillBuilder, AbilitiesBuilder} from "./ElementsBuilder.js"
 const skills_address = "json/skills.json"
 const my_data_address = "json/my_data.json"
 
@@ -27,4 +27,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("old").innerText = BuildTools.calculatePeriod(mydata_json["born"])
     HobbiesBuilder.build(mydata_json["hobbies"])
+    AbilitiesBuilder.build(mydata_json["other_abilities"])
 })
