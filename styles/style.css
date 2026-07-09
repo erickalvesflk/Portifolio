@@ -3,6 +3,9 @@
 @import url("apresentation.css");
 @import url("query.css");
 @import url("skill.css");
+@import url("eduaction.css");
+
+/* ====== GENERAL CONFIG ====== */
 
 :root {
     --main-color: #0061D7;
@@ -51,7 +54,7 @@ p {
         max-width: 1000px;
         margin: auto;
         display: grid;
-        grid-template-columns: auto 40% 50% auto;
+        grid-template-columns: auto 35% 55% auto;
     }
 
     section#apresentation-section {

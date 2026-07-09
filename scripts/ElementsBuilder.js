@@ -1,6 +1,11 @@
 /**
  * @file - Group of classes, which have helpful methods for create new elements for the website
 */
+const hobbies_div = document.getElementById("hobbies-div") 
+const abilities_div = document.getElementById("other-abilities-div") 
+const skills_article = document.getElementById("skills-container") 
+const education_article = document.getElementById("education-container") 
+const education_bar = document.getElementById("education-bar") 
 
 /**
  * @classdesc - Class with helpful methods for building elements
@@ -35,7 +40,7 @@ export class BuildTools {
     }
 }
 
-const hobbies_div = document.getElementById("hobbies-div") 
+/** @classdesc - Constructor class for hobbies div */
 export class HobbiesBuilder {
     /**
      * build a list of hobbies
@@ -50,7 +55,7 @@ export class HobbiesBuilder {
                     new_hobbie.classList.add("hobbie-p")
                     new_hobbie.innerText = hobbie
 
-                    console.log(`[hobbie loaded] - ${hobbie}`)
+                    console.log(`[hobbie loaded] - Hobbie Name: ${hobbie}`)
                     hobbies_div.appendChild(new_hobbie)                
                 }
             });
@@ -58,7 +63,7 @@ export class HobbiesBuilder {
     }
 }
 
-const abilities_div = document.getElementById("other-abilities-div") 
+/** @classdesc - Constructor class for abilities div */
 export class AbilitiesBuilder {
     /**
      * build a list of abilities
@@ -73,7 +78,7 @@ export class AbilitiesBuilder {
                     new_hobbie.classList.add("other_ability-p")
                     new_hobbie.innerText = hobbie
 
-                    console.log(`[Other ability loaded] - ${hobbie}`)
+                    console.log(`[Other ability loaded] - Ability name: ${hobbie}`)
                     abilities_div .appendChild(new_hobbie)                
                 }
             });
@@ -82,7 +87,6 @@ export class AbilitiesBuilder {
 }
 
 /**
- * @classdesc - Constructor class for the section skills
  * 
  * <div class="skill">
  *    <div class="skill-container">
@@ -104,7 +108,8 @@ export class AbilitiesBuilder {
  *    </details>
  * </div>
 */
-const skills_article = document.getElementById("skills-container") 
+
+/** @classdesc - Constructor class for the section skills */
 export class SkillBuilder extends BuildTools {
 
     /**
@@ -161,5 +166,40 @@ export class SkillBuilder extends BuildTools {
         skill_div.addEventListener("click",()=>{
             details_div.toggleAttribute("open")
         })
+    }
+}
+
+/**
+ * <div class="formation">
+ *    <h3><Nome Curso></h3>
+ *    <ul>
+ *        <li><span>Instituição:</span> Básico - <nivel> </li>
+ *        <li><periodo 0> - <periodo 1> </li>
+ *    </ul>
+ * </div>
+*/
+
+/** @classdesc - Constructor class for the section formation */
+export class EducationBuilder {
+    /**
+     * build an educaton div
+     * @param {string} institution_name - Name of the institution
+     * @param {[number, number]} period - array with the start and the end of the formation
+     * @param {string} course - Course name
+     */
+    static build(institution_name, period, course) {
+        let formation_div = document.createElement("div")
+        formation_div.classList.add("formation")
+        let list = document.createElement("ul")
+        formation_div.innerHTML += `<h3>${course}</h3>`
+        list.innerHTML += `<li><span>Instituição: </span>${institution_name}</li>`
+        list.innerHTML += `<li>${period[0]} - ${period[1]}</li>`
+        
+        formation_div.appendChild(list)
+        education_article.appendChild(formation_div)
+        education_bar.appendChild(document.createElement("div"))
+
+        console.log(`[formation loaded] - Course name: ${course}`)
+
     }
 }
