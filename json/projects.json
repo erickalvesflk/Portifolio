@@ -1,18 +1,27 @@
 [
     {
-        "image_src": "images/projects/minecamp.png",
-        "project_name": "Minecamp",
-        "date":[2024],
-        "used_tools": ["C++","Terminal"],
-        "description": "Projeto onde construi um Campo Minado para terminal utilizando apenas C++",
-        "link": "https://github.com/erickalvesflk/minecamp-game"
+        "image_src": "images/projects/constructor-py.png",
+        "project_name": "Constructor",
+        "date":[2026,3],
+        "used_tools": ["Python"],
+        "description": "Automação para criação de arquivos padronizados para ambiente universitário.",
+        "link": "https://github.com/erickalvesflk/Constructor"
+    },
+
+    {
+        "image_src": "images/projects/calculadora-py.png",
+        "project_name": "Calculadora em Qt",
+        "date":[2026,4],
+        "used_tools": ["Python","Qt"],
+        "description": "Calculadora customizavel feita com o framework QT com fork para Python. Projeto simples focado em aprender as ferramentas desse framework",
+        "link": "https://github.com/erickalvesflk/Calculadora-Pyside6"
     },
 
     {
         "image_src": "images/projects/minecamp.png",
         "project_name": "Minecamp",
-        "date":[2026],
-        "used_tools": ["C++","Terminal"],
+        "date":[2026,5],
+        "used_tools": ["C++"],
         "description": "Projeto onde construi um Campo Minado para terminal utilizando apenas C++",
         "link": "https://github.com/erickalvesflk/minecamp-game"
     }
