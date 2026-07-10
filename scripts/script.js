@@ -61,3 +61,17 @@ document.addEventListener("DOMContentLoaded",()=>{
         })
     })
 })
+
+nav_options.forEach((nav, index) => {
+    let hyper_link = nav.querySelector("a")
+    hyper_link.addEventListener("click",(event)=>{
+        event.preventDefault() // reseta o funcionamento padrão do hyperlink ao ser clicado
+        let destination_element = document.querySelector(hyper_link.getAttribute("href"))
+        let absolute_pos_element = destination_element.getBoundingClientRect().top + window.scrollY - 82
+        window.scroll({
+            top: absolute_pos_element,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
+});

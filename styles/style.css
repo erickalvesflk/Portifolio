@@ -117,4 +117,8 @@ p {
     .project img {
         display: none;
     }
+
+    dialog {
+        width: 80%;
+    }
 }

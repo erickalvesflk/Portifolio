@@ -15,7 +15,7 @@ export class BuildTools {
 
     /**
      * Returns a formatted period.
-     * @param {[string, string]} date - array with year and month?
+     * @param {[number, number?, number?]} date - array with year and month?
      * @returns {string}
      */
     static calculatePeriod(date){
@@ -24,17 +24,43 @@ export class BuildTools {
         // (*) month -> milisseconds
         const CONVERTER = 30 * 24 * 3600 * 1000
         let now = Date.now()
-        let skill_date = Date.UTC(date[0],date[1] ? date[1] : 0)
-        let delta_date = now - skill_date
+        let year = date[0];
+        let month = date[1] !== undefined ? date[1]-1 : 0; // Remova "- 1" se sua array já for base-0
+        let day = date[2] !== undefined ? date[2] : 1; 
 
-        if(delta_date <= 6 * CONVERTER){
-            // Less then 6 months
-            return "3 meses"
+        let skill_date = Date.UTC(year, month, day);
+        let delta_date = now - skill_date; // Resultado em milissegundos
+
+        if(date[2]){
+            // DETERMINED MODE ACTIVATED
+            if(delta_date <= 1 * CONVERTER / 4){
+                // less then 1 weak
+                let day_ago = Math.floor(delta_date / (24 * 3600 * 1000));
+                return `${day_ago} dia${day_ago===1 ? '' : 's'}`
+            }
+            if(delta_date <= 1 * CONVERTER){
+                // less then 1 month
+                let weak_ago = Math.floor(delta_date / (24 * 3600 * 1000)/7);
+                return `${weak_ago} semana${weak_ago===1 ? '' : 's'}`
+            }
+            if(delta_date <= 12 * CONVERTER){
+                // less then 1 year
+                let month_ago = Math.floor(delta_date / CONVERTER);
+                return `${month_ago} mes${month_ago===1 ? '' : 'es'}`
+            }
+        }else{
+            // DETERMINED MODE NOT ACTIVATED
+            if(delta_date <= 6 * CONVERTER){
+                // Less then 6 months
+                return "3 meses"
+            }
+            if(delta_date <= 12 * CONVERTER){
+                // less then 1 year
+                return "6 meses"
+            }
         }
-        if(delta_date <= 12 * CONVERTER){
-            // less then 1 year
-            return "6 meses"
-        }
+
+
         // More than 1 year
         let date_year_format = Math.floor(delta_date / CONVERTER / 12)
         return `${date_year_format} ${date_year_format > 1 ? 'anos' : 'ano'}`
