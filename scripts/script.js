@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     // INFORMAÇÃO AO PASSAR MOUSE SOBRE NAV
     nav_options.forEach((nav, index) => {
         let description = nav.querySelector("p")
-        nav.addEventListener("mouseout",() => {
-            showDescription(nav)
-            description.style.display = "none"
-        })
-        nav.addEventListener("mouseover",() => {
+        nav.addEventListener("pointerenter",() => {
             showDescription(nav)
             description.style.display = "inline"
+        })
+        nav.addEventListener("pointerleave",() => {
+            showDescription(nav)
+            description.style.display = "none"
         })
     });
 
