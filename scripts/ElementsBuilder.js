@@ -46,7 +46,7 @@ export class BuildTools {
             if(delta_date <= 12 * CONVERTER){
                 // less then 1 year
                 let month_ago = Math.floor(delta_date / CONVERTER);
-                return `${month_ago} mes${month_ago===1 ? '' : 'es'}`
+                return `${month_ago} m${month_ago===1 ? 'ês' : 'eses'}`
             }
         }else{
             // DETERMINED MODE NOT ACTIVATED
