@@ -27,7 +27,7 @@
         "image_src": "images/projects/portifolio.png",
         "project_name": "Portifólio",
         "date":[2026,7,6],
-        "used_tools": ["HTML","CSS","Javascript","Json","cu"],
+        "used_tools": ["HTML","CSS","Javascript","Json"],
         "description": "Projeto, onde utilizando tecnologias básicas do HTML, CSS e JS, contrui um portifólio. No qual, pode ser facilmente editado com Json",
         "link": "https://github.com/erickalvesflk/portifolio"
     }
