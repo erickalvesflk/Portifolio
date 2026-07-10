@@ -52,9 +52,11 @@
     padding-top: 5px;
 }
 
+/* Projects - Tags */
 .project-container ul {
     list-style: none;
     display: flex;
+    flex-flow: row wrap;
     gap: 5px;
     margin: 5px 0px 5px 0px;
 }
