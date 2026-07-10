@@ -1,0 +1,19 @@
+[
+    {
+        "image_src": "images/projects/minecamp.png",
+        "project_name": "Minecamp",
+        "date":[2024],
+        "used_tools": ["C++","Terminal"],
+        "description": "Projeto onde construi um Campo Minado para terminal utilizando apenas C++",
+        "link": "https://github.com/erickalvesflk/minecamp-game"
+    },
+
+    {
+        "image_src": "images/projects/minecamp.png",
+        "project_name": "Minecamp",
+        "date":[2026],
+        "used_tools": ["C++","Terminal"],
+        "description": "Projeto onde construi um Campo Minado para terminal utilizando apenas C++",
+        "link": "https://github.com/erickalvesflk/minecamp-game"
+    }
+]

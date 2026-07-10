@@ -1,9 +1,11 @@
 @charset "UTF-8";
+
 @import url("header.css");
 @import url("apresentation.css");
-@import url("query.css");
 @import url("skill.css");
 @import url("eduaction.css");
+@import url("projects.css");
+@import url("footer.css");
 @import url("dialog.css");
 
 /* ====== GENERAL CONFIG ====== */
@@ -51,11 +53,16 @@ p {
         top: 65px;
         border-width: 0px;
     }
+
+    li#home-op {
+        display: none;
+    }
+
     main {
         max-width: 1000px;
         margin: auto;
         display: grid;
-        grid-template-columns: auto 35% 55% auto;
+        grid-template-columns: auto 30% 60% auto;
     }
 
     section#apresentation-section {
@@ -69,6 +76,10 @@ p {
 
     div#apresentation__title a{
         font-size: 1.2em;
+    }
+
+    section#apresentation-section h3{
+        font-size: 1em;
     }
 
     div#apresentation__title a:hover{
@@ -96,5 +107,14 @@ p {
     }
     div.skill summary{
         font-size: .9em;
+    }
+    .project__title-div p {
+        display: none;
+    }
+    .project__title-div h3 {
+        font-size: 1.8em;
+    }
+    .project img {
+        display: none;
     }
 }

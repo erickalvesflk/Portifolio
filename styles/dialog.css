@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-:root {
-    --main-color: #0061D7;
-    --secundary-color: #215BA3;
-    --background-color: #f8f8f8;
-    --card-background-color: #f0f0f0;
-    --card2-background-color: #d9e3f0;
-    --inverted-main-color: #2D4B70;
-    --text-color: #292D33;
-    --white-text-color: #f8f8f8; 
-}
-
 dialog {
     position: fixed;
     top: 50%;

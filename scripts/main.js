@@ -1,7 +1,13 @@
-import {BuildTools, HobbiesBuilder, SkillBuilder, AbilitiesBuilder, EducationBuilder} from "./ElementsBuilder.js"
+import {
+        BuildTools, HobbiesBuilder, 
+        SkillBuilder, AbilitiesBuilder, 
+        EducationBuilder, ProjectBuilder
+    } 
+    from "./ElementsBuilder.js"
 const skills_address = "json/skills.json"
 const my_data_address = "json/my_data.json"
 const formation_address = "json/formation.json"
+const projects_address = "json/projects.json"
 
 async function loadData(address) {
     const response = await fetch(address)
@@ -14,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const skill_json = await loadData(skills_address)
     const mydata_json = await loadData(my_data_address)
     const formation_json = await loadData(formation_address)
+    const project_json = await loadData(projects_address)
     
     document.getElementById("old").innerText = BuildTools.calculatePeriod(mydata_json["born"])
     HobbiesBuilder.build(mydata_json["hobbies"])
@@ -33,5 +40,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     formation_json.forEach((formation, index)=>{
         EducationBuilder.build(formation["institution"],formation["period"],formation["course"])
+    })
+
+    project_json.forEach((project)=>{
+        ProjectBuilder.build(
+        project["project_name"],
+        project["date"],
+        project["description"],
+        project["used_tools"],
+        project["link"],
+        project["image_src"]
+        )
     })
 })

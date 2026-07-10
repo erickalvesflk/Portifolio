@@ -3,9 +3,10 @@
 */
 const hobbies_div = document.getElementById("hobbies-div") 
 const abilities_div = document.getElementById("other-abilities-div") 
-const skills_article = document.getElementById("skills-container") 
-const education_article = document.getElementById("education-container") 
+const skills_container = document.getElementById("skills-container") 
+const education_container = document.getElementById("education-container") 
 const education_bar = document.getElementById("education-bar") 
+const projects_container = document.getElementById("projects-container") 
 
 /**
  * @classdesc - Class with helpful methods for building elements
@@ -162,7 +163,7 @@ export class SkillBuilder extends BuildTools {
             details_div.appendChild(details_list)
         }
 
-        skills_article.appendChild(skill_div)
+        skills_container.appendChild(skill_div)
 
         // CRIEATING EVENT FOR WHEN CLICK, OPEN DETAILS
         skill_div.addEventListener("click",()=>{
@@ -202,9 +203,79 @@ export class EducationBuilder {
         list.innerHTML += `<li>${period[0]} - ${period[1]}</li>`
         
         formation_div.appendChild(list)
-        education_article.appendChild(formation_div)
+        education_container.appendChild(formation_div)
         education_bar.appendChild(document.createElement("div"))
 
         console.log(`[formation loaded] - Course name: ${course}`)
     }
+}
+
+
+
+/**
+ * <div class="project">
+ *    <img src="">
+ *    <div>
+ *      <h3><Nome Projeto></h3>
+ *      <p><Data></p>
+ *    </div>
+ *    <div class="project-container">
+ *      <ul>
+ *          <li><ferramenta-1></li>
+ *          <li><ferramenta-2></li>
+ *           ...
+ *          <li><ferramenta-n></li>
+ *      </ul>
+ *      <a></a>
+ *      <p><descrição></p>
+ *    </div>
+ * </div>
+*/
+/** 
+ * @classdesc - Constructor class for the section projects
+ * */
+export class ProjectBuilder extends BuildTools{
+
+    /**
+     * Build a new project for the section projects
+     * @param {string} project_name - Project name
+     * @param {[number,number?]} date - Date of the project: [year, month?]
+     * @param {string} desc - Description of the project
+     * @param {[string]} tools - Tools used in the project
+     * @param {[string]?} link - Links for see the project
+     * @param {string?} img - Img source
+     */
+    static build(project_name, date, desc, tools, link, img){
+        let project_div = document.createElement("div")
+        project_div.classList.add("project")
+        
+        let project_container = document.createElement("div")
+        project_container.classList.add("project-container")
+
+        if(img) project_div.innerHTML += `<img src="${img}">`;
+
+        let title_div = document.createElement("div")
+        title_div.classList.add("project__title-div")
+        title_div.innerHTML += `<h3>${project_name}</h3>`
+        title_div.innerHTML += `<p>há ${this.calculatePeriod(date)} atrás</p>`
+
+        let tools_list = document.createElement("ul")
+        tools.forEach((tool) => {
+            tools_list.innerHTML += `<li>${tool}</li>`
+        })
+
+        project_container.appendChild(title_div)
+        project_container.appendChild(tools_list)
+        
+        project_container.innerHTML += `<p>${desc}</p>`
+
+        if (link){
+            project_container.innerHTML += `<a href="${link}" target="_blank" >Veja o projeto</a>`
+        }
+
+        project_div.appendChild(project_container)
+        projects_container.appendChild(project_div)
+        console.log(`[Project Loaded] - Project name: ${project_name}`)
+    }
+
 }
