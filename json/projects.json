@@ -12,7 +12,7 @@
         "project_name": "Calculadora em Qt",
         "date":[2026,5,29],
         "used_tools": ["Python","Qt"],
-        "description": "Calculadora customizavel feita com o framework QT com fork para Python. Projeto simples focado em aprender as ferramentas desse framework",
+        "description": "Calculadora customizavel feita com o framework Qt com fork para Python. Projeto simples focado em aprender as ferramentas desse framework",
         "link": "https://github.com/erickalvesflk/Calculadora-Pyside6"
     },
     {
